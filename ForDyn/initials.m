@@ -1,14 +1,18 @@
-function [y0, t_initial, t_final, incr, rtol, atol]=initials()
+% ReDySim initials module. The initial conditions are entered in this module
+% Contibutors: Dr. Suril Shah and Prof S. K. Saha @IIT Delhi
+
+function [y0, ti, tf, incr, rtol, atol]=initials()
 
 %Simulation time
-t_initial=0;
-t_final=30;
+ti=0;
+tf=30;
 
 %Inverse kinematics for obtaining initial configuration
 [n]=inputs();
 
-%7 Link system
-th=[0.3803;   -0.6198;    1.2867;    2.4411;    1.7062;   -1.0058];%60
+%3 Link system
+
+th=[0.3803;   -0.6198;    1.2867];%60
 dth=zeros(n-1,1);
 
 %Base motions

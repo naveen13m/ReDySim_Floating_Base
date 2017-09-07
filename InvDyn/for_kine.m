@@ -1,6 +1,10 @@
 % ReDySim forward kinematics module. This module perform forward kinematics of the system under study
 % Contibutors: Dr. Suril Shah and Prof S. K. Saha @IIT Delhi
 
+% tt: angular velocity of link frame in the body frame
+% sbf: corner positions of the base link in inertial frame
+% ttf: angular velocity of the link frame in the inertial frame
+
 function [tt vc  scf vcf sof stf sbf vtf ttf]=for_kine(q,th, dq, dth, n, alp, a, b, bt, dx, dy, dz, al, alt)
 % FORWARD RECURSION _FINDING TWIST AND TWIST RATE
 %Initialization
